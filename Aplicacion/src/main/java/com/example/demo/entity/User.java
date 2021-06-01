@@ -34,9 +34,9 @@ public class User implements Serializable{
 	private String firstName;
 	@Column 
 	private String lastName;
-	@Column(unique = true) 
+	@Column
 	private String email;
-	@Column(unique = true) 
+	@Column 
 	private String username;
 	@Column
 	private String password;
@@ -49,6 +49,10 @@ public class User implements Serializable{
 		,inverseJoinColumns=@JoinColumn(name="role_id"))
 	
 	private Set<Role> roles;
+	
+	public User() {
+		super();
+	}
 	
 	public User(Long id) {
 		super();
