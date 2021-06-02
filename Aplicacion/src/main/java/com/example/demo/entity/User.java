@@ -51,7 +51,6 @@ public class User implements Serializable{
 	private String password;
 	//Si es un boolean se coloca @NotNull
 	@Transient
-	@NotBlank
 	private String confirmPassword;
 	@Size(min=1)
 	@ManyToMany(fetch = FetchType.LAZY)
