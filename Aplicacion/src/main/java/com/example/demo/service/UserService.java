@@ -1,6 +1,7 @@
 package com.example.demo.service;
 import javax.validation.Valid;
 
+import com.example.demo.dto.ChangePasswordForm;
 import com.example.demo.entity.User;
 
 public interface UserService {
@@ -13,4 +14,6 @@ public interface UserService {
 	public User updateUser(User user) throws Exception;
 	
 	public void deleteUser(Long id) throws Exception;
+	
+	public User changePassword(ChangePasswordForm form) throws Exception;
 }
